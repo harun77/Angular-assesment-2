@@ -1,0 +1,26 @@
+<table *ngIf="data">
+  <tr>
+    <td class="sortable" (click)="sort('name')"><i class="fa fa-sort" aria-hidden="true"></i> Name</td>
+    <td class="sortable" (click)="sort('gender')"><i class="fa fa-sort" aria-hidden="true"></i> Gender</td>
+    <td class="sortable" (click)="sort('birth_year')"><i class="fa fa-sort" aria-hidden="true"></i> Birth Year</td>
+    <td class="sortable" (click)="sort('eye_color')"><i class="fa fa-sort" aria-hidden="true"></i> Eye Color</td>
+    <td class="sortable" (click)="sort('hair_color')"><i class="fa fa-sort" aria-hidden="true"></i> Hair Color</td>
+    <td class="sortable" (click)="sort('height')"><i class="fa fa-sort" aria-hidden="true"></i> Height</td>
+    <td class="sortable" (click)="sort('mass')"><i class="fa fa-sort" aria-hidden="true"></i> Mass</td>
+    <td class="sortable" (click)="sort('skin_color')"><i class="fa fa-sort" aria-hidden="true"></i> Skin Color</td>
+    <td class="sortable" (click)="sort('created')"><i class="fa fa-sort" aria-hidden="true"></i> Created</td>
+    <td class="sortable" (click)="sort('edited')"><i class="fa fa-sort" aria-hidden="true"></i> Edited</td>
+  </tr>
+  <tr *ngFor="let data of data.results">
+    <td>{{data.name}}</td>
+    <td>{{data.gender}}</td>
+    <td>{{data.birth_year}}</td>
+    <td>{{data.eye_color}}</td>
+    <td>{{data.hair_color}}</td>
+    <td>{{data.height}}</td>
+    <td>{{data.mass}}</td>
+    <td>{{data.skin_color}}</td>
+    <td>{{data.created | date}}</td>
+    <td>{{data.edited | date}}</td>
+  </tr>
+</table>
